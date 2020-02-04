@@ -1,0 +1,14 @@
+.todo-app__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.todo-app__btns .btn {
+  width: 30px;
+}
+
+.todo-app__btns .btn-outline-success {
+  margin: 0 5px 0 0;
+}

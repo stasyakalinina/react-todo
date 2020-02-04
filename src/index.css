@@ -1,0 +1,10 @@
+.todo-app {
+  margin: 5rem auto 2rem;
+  padding: 0 0.75rem;
+}
+
+.todo-app__panel {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px;
+}
