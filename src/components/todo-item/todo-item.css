@@ -9,6 +9,11 @@
   text-decoration: line-through;
 }
 
+.todo-app__item.is-important .todo-app__label {
+  font-weight: 600;
+  color: steelblue;
+}
+
 .todo-app__btns .btn {
   width: 30px;
 }
