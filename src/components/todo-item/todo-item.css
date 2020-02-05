@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+.todo-app__item.is-done .todo-app__label {
+  text-decoration: line-through;
+}
+
 .todo-app__btns .btn {
   width: 30px;
 }
