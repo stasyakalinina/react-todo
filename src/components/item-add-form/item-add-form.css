@@ -1,0 +1,11 @@
+.todo-app__form-add {
+  display: flex;
+}
+
+.todo-app__form-add input {
+  margin: 0 10px 0 0;
+}
+
+.todo-app__btn-add {
+  min-width: 100px;
+}
