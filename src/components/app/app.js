@@ -11,12 +11,21 @@ export default class App extends Component {
 
   maxId = 100;
 
+  createItem = (text) => {
+    return {
+      label: text,
+      important: false,
+      done: false,
+      id: this.maxId++,
+    };
+  };
+
   state = {
     todoData: [
-      { label: 'Drink coffee', important: false, id: 1},
-      { label: 'Make awesome app', important: true, id: 2},
-      { label: 'Have a lunch', important: false, id: 3  },
-    ],
+      this.createItem('Drink coffee'),
+      this.createItem('Make awesome app'),
+      this.createItem('Have a lunch'),
+    ]
   };
 
   deleteItem = (id) => {
@@ -35,11 +44,7 @@ export default class App extends Component {
   };
 
   addItem = (text) => {
-    let newItem = {
-      label: text,
-      important: false,
-      id: this.maxId++,
-    };
+    let newItem = this.createItem(text);
 
     this.setState(({todoData}) => {
       let newArr = [
@@ -49,6 +54,16 @@ export default class App extends Component {
       return {
         todoData: newArr,
       }
+    });
+  };
+
+  onToggleImportant = (id) => {
+    console.log('toggle important', id);
+  };
+
+  onToggleDone = (id) => {
+    this.setState(({todoData}) => {
+      let index = todoData.findIndex((el) => el.id === id);
     });
   };
 
@@ -63,10 +78,14 @@ export default class App extends Component {
           </div>
           <TodoList
             todos={this.state.todoData}
-            onDeleted={this.deleteItem} />
+            onDeleted={this.deleteItem}
+            onToggleImportant={this.onToggleImportant}
+            onToggleDone={this.onToggleDone}
+          />
           <div className="todo-app__bottom">
             <ItemAddForm
-              onItemAdded={this.addItem}/>
+              onItemAdded={this.addItem}
+            />
           </div>
         </main>
       </div>
