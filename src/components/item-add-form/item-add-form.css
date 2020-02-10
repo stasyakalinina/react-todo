@@ -9,3 +9,7 @@
 .todo-app__btn-add {
   min-width: 100px;
 }
+
+.todo-app__btn-add[disabled] {
+  pointer-events: none;
+}
