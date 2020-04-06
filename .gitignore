@@ -23,6 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 ### Code ###
-# Visual Studio Code
+# Visual Studio Codegit
 .settings/
 .vscode/
